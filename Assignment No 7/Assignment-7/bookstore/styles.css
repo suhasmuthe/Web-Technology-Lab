@@ -1,0 +1,105 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body {
+    background-color: #f4f7fe;
+    color: #2b3674;
+    min-height: 100vh;
+}
+
+/* --- SPLASH PAGE --- */
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #4318FF 0%, #868CFF 100%);
+    color: white;
+}
+.splash-container h1 { font-size: 3rem; margin-bottom: 20px; }
+.btn-splash {
+    background: white; color: #4318FF; padding: 15px 40px;
+    border-radius: 50px; font-weight: 700; font-size: 1.2rem;
+    text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.btn-splash:hover { transform: translateY(-3px); }
+
+/* --- DASHBOARD LAYOUT --- */
+.dashboard-header {
+    background: white; padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    display: flex; align-items: center; justify-content: space-between;
+}
+.dashboard-header h1 { font-size: 1.5rem; color: #2b3674; }
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* 2-Column Layout */
+    gap: 30px;
+    padding: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* --- CARDS & FORMS --- */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+.card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 25px; color: #2b3674; }
+
+.input-group { margin-bottom: 20px; }
+.input-group label {
+    display: block; font-size: 0.9rem; font-weight: 600;
+    color: #a3aed1; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.input-group input {
+    width: 100%; padding: 14px 16px; border: 2px solid #e0e5f2;
+    border-radius: 12px; font-size: 1rem; color: #2b3674;
+    transition: all 0.3s ease; outline: none; background: #fcfcfd;
+}
+.input-group input:focus { border-color: #4318FF; background: white; box-shadow: 0 0 0 4px rgba(67,24,255,0.1); }
+
+.btn-submit {
+    width: 100%; background: #4318FF; color: white; border: none;
+    padding: 16px; border-radius: 12px; font-size: 1rem; font-weight: 700;
+    cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(67,24,255,0.15);
+}
+.btn-submit:hover { background: #3311db; transform: translateY(-2px); }
+
+.btn-cancel {
+    display: block; text-align: center; margin-top: 15px; color: #a3aed1;
+    text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s;
+}
+.btn-cancel:hover { color: #e74c3c; }
+
+/* --- MODERN TABLE --- */
+.table-container { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th {
+    background: #f4f7fe; color: #a3aed1; padding: 16px;
+    text-align: left; font-size: 0.85rem; text-transform: uppercase;
+    letter-spacing: 1px; font-weight: 700; border-bottom: 2px solid #e0e5f2;
+}
+td { padding: 18px 16px; border-bottom: 1px solid #e0e5f2; font-weight: 500; }
+tr:hover td { background: #fafbff; }
+
+.price-pill { background: #e5f9ed; color: #05cd99; padding: 6px 12px; border-radius: 20px; font-weight: 700; }
+.stock-pill { background: #fff3e0; color: #ff9800; padding: 6px 12px; border-radius: 20px; font-weight: 700; }
+
+.btn-action {
+    padding: 8px 16px; border-radius: 8px; color: white;
+    text-decoration: none; font-size: 0.85rem; font-weight: 600;
+    margin-right: 8px; display: inline-flex; align-items: center; transition: 0.2s;
+}
+.btn-edit { background: #f39c12; }
+.btn-edit:hover { background: #d68910; }
+.btn-delete { background: #e74c3c; }
+.btn-delete:hover { background: #c0392b; }
